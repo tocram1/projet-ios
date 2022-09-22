@@ -41,7 +41,6 @@ class MapsController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             locationManager.startUpdatingLocation()
             
         }
-        //while (MapView.userLocation.location == nil) {
             // chopper la position actuelle
             if let coor = MapView.userLocation.location?.coordinate{
                 let posObject : NSDictionary = [
@@ -50,14 +49,15 @@ class MapsController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 ]
                 
                 // récupérer l'ancienne position
-                print("uuid : ", UIDevice.current.identifierForVendor!.uuidString)
                 database.child(UIDevice.current.identifierForVendor!.uuidString).getData(completion:  { error, resPos in
                     guard error == nil else {
-                      print(error!.localizedDescription)
+                      print("Error: ", error!.localizedDescription)
                       return;
                     }
-                    print(resPos?.value)
-                    self.oldPos = resPos?.value as? Position ?? Position(long: 0.0, lat: 0.0);
+                    let res = resPos?.value as? Position
+                    let myStringDict = resPos?.value as? [String:Double]
+
+                    self.oldPos = Position(long: myStringDict?["long"] ?? 0.0, lat: myStringDict?["lat"] ?? 0.0)
                 });
                 
                 // enregistrer la nouvelle position
@@ -68,13 +68,8 @@ class MapsController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     @IBAction func onClickGoToLastPosition(_ sender: Any) {
-        print(oldPos)
         let initialLocation = CLLocation(latitude: oldPos.lat, longitude: oldPos.long)
         MapView.centerToLocation(initialLocation)
-    }
-    
-    func getLastPosition() -> String {
-        return ""
     }
 }
 
