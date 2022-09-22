@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         let controller = story.instantiateViewController(identifier: "SecondController")
         self.present(controller, animated: true, completion: nil)
     }
+    
+    @IBAction func onClickMap(_ sender: Any) {
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let controller = story.instantiateViewController(identifier: "MapsController")
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

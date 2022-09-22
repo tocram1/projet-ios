@@ -17,6 +17,7 @@
 		ECD43C7C28DB1D2C0085E1BE /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD43C7B28DB1D2C0085E1BE /* SecondController.swift */; };
 		ECD43CB628DB3DB80085E1BE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = ECD43CB528DB3DB80085E1BE /* FirebaseDatabase */; };
 		ECD43CB828DB3DB90085E1BE /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECD43CB728DB3DB90085E1BE /* FirebaseDatabaseSwift */; };
+		ECD43CBA28DC480D0085E1BE /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD43CB928DC480D0085E1BE /* MapsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ECD43C6D28DB08AA0085E1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD43C7528DB0B5E0085E1BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECD43C7B28DB1D2C0085E1BE /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+		ECD43CB928DC480D0085E1BE /* MapsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				ECD43C6A28DB08AA0085E1BE /* LaunchScreen.storyboard */,
 				ECD43C6D28DB08AA0085E1BE /* Info.plist */,
 				ECD43C7528DB0B5E0085E1BE /* GoogleService-Info.plist */,
+				ECD43CB928DC480D0085E1BE /* MapsController.swift */,
 			);
 			path = SamyTheoProjet;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				ECD43C7C28DB1D2C0085E1BE /* SecondController.swift in Sources */,
 				ECD43C6028DB08A60085E1BE /* AppDelegate.swift in Sources */,
 				ECD43C6228DB08A60085E1BE /* SceneDelegate.swift in Sources */,
+				ECD43CBA28DC480D0085E1BE /* MapsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

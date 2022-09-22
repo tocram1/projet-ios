@@ -13,19 +13,29 @@ class SecondController: UIViewController {
     
     var data = [Product]()
     @IBOutlet weak var tableCell: UITableView!
-    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableCell.dataSource = self
         // Do any additional setup after loading the view.
+        
+        let url = URL(string:  "https://dummyjson.com/products/")!
+        print(url)
+        fetchingApiData(URL: url) { result in
+            self.data = result.products
+            print(self.data)
+            Dispatch.DispatchQueue.main.async {
+                self.tableCell.reloadData()
+            }
+        }
     }
 
-    func fetchingApiData(URL url:URL, completion: @escaping ([Product])-> Void) {
+    func fetchingApiData(URL url:URL, completion: @escaping (Products)-> Void) {
         let task = URLSession.shared.dataTask(with: url ) {( data, response, error ) in guard let data = data else {return}
             let decoder = JSONDecoder()
             
             do {
-                let parsingData = try decoder.decode([Product].self, from: data)
+                let parsingData = try decoder.decode(Products.self, from: data)
                 
                 completion(parsingData)
                 
@@ -36,20 +46,6 @@ class SecondController: UIViewController {
         
         task.resume()
     }
-    
-    @IBAction func onClickSubmit(_ sender: Any) {
-        let productId = textField.text ?? "1"
-        let url = URL(string:  "https://dummyjson.com/products/")!
-        print(url)
-        fetchingApiData(URL: url) { result in
-            self.data = result
-            print(self.data)
-            Dispatch.DispatchQueue.main.async {
-                self.tableCell.reloadData()
-            }
-        }
-    }
-    
 }
 
 extension SecondController : UITableViewDataSource {
@@ -70,4 +66,8 @@ struct Product : Decodable {
     var title: String
     var description: String
     var price: Double
+}
+
+struct Products : Decodable {
+    var products: [Product]
 }
