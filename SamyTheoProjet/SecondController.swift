@@ -71,9 +71,7 @@ class SecondController: UIViewController,UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let row = indexPath.row
-            
-            let selectedData = data[row]
-            
+                        
         sendNotificationIn5Seconds(title:String(data[row].title), price:String(data[row].price))
     }
     

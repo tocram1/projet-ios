@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>659596988604-gi7duu6meqnkpjk4ruhvcp6pf0kcv5i9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.659596988604-gi7duu6meqnkpjk4ruhvcp6pf0kcv5i9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBD3PuLVolHEpG1mRTqb-jtn8vnVek__uU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>659596988604</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.insset.project-ios</string>
+	<key>PROJECT_ID</key>
+	<string>projet-ios-f59df</string>
+	<key>STORAGE_BUCKET</key>
+	<string>projet-ios-f59df.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:659596988604:ios:c8371e019bd6225c0f80b9</string>
+	<key>DATABASE_URL</key>
+	<string>https://projet-ios-f59df-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

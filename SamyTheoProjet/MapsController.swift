@@ -54,7 +54,6 @@ class MapsController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                       print("Error: ", error!.localizedDescription)
                       return;
                     }
-                    let res = resPos?.value as? Position
                     let myStringDict = resPos?.value as? [String:Double]
 
                     self.oldPos = Position(long: myStringDict?["long"] ?? 0.0, lat: myStringDict?["lat"] ?? 0.0)
@@ -68,7 +67,10 @@ class MapsController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     @IBAction func onClickGoToLastPosition(_ sender: Any) {
-        let initialLocation = CLLocation(latitude: oldPos.lat, longitude: oldPos.long)
+        var initialLocation = CLLocation(latitude: 49.83714, longitude: 3.2999)
+        if(oldPos != nil) {
+             initialLocation = CLLocation(latitude: oldPos.lat, longitude: oldPos.long)
+        }
         MapView.centerToLocation(initialLocation)
     }
 }

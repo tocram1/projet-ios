@@ -11,20 +11,17 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
+					<key>NSLocationAlwaysUsageDescription</key>
+					<string>Accept or die</string>
 					<key>UISceneConfigurationName</key>
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
-                    <key>NSLocationAlwaysUsageDescription</key>
-                    <string>Accept or die</string>
-                    
 				</dict>
 			</array>
 		</dict>
 	</dict>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Accept or die again</string>
 </dict>
 </plist>
