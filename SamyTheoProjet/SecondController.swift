@@ -60,7 +60,7 @@ class SecondController: UIViewController,UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         cell?.textLabel?.text = data[indexPath.row].title
-        cell?.detailTextLabel?.text = String(data[indexPath.row].price)
+        cell?.detailTextLabel?.text = String(data[indexPath.row].price) + " $"
         return cell!
     }
     
@@ -72,7 +72,7 @@ class SecondController: UIViewController,UITableViewDataSource, UITableViewDeleg
         tableView.deselectRow(at: indexPath, animated: true)
         let row = indexPath.row
                         
-        sendNotificationIn5Seconds(title:String(data[row].title), price:String(data[row].price))
+        sendNotificationIn5Seconds(title:String(data[row].title), price:String(data[row].price) + " $")
     }
     
     func sendNotificationIn5Seconds(title: String, price: String) {

@@ -25,8 +25,8 @@ class MapsController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     private let locationManager = CLLocationManager()
     private var oldPos: Position!
-    
     @IBOutlet weak var MapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
